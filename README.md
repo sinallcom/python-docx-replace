@@ -1,2 +1,3 @@
 # python-docx-replace
-text replace function for python-docx 
+There is no text replace function in python-docx
+So, I write this one. It works with paragraphs and tables.
