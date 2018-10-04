@@ -31,9 +31,16 @@
         for row in table.rows:
             for cell in row.cells:
                 docx_replace_substring(cell, template_str, value_str, max_cnt)
-                
+
+
+# usage example
+from docx import Document
+
 filename = 'doctestx.docx'
-doc = docx.Document(filename)
-docx_replace_substring(doc, r'text_to_replace', replace1)
-docx_replace_substring(doc, r'text_to_replace2', replace2)
-doc.save('generated_doc1.docx')                
+replacement1 = r'new_text_in_position_1'
+replacement2 = r'new_text_in_position_2'
+
+doc = Document(filename)
+docx_replace_substring(doc, r'text_to_replace1', replacement1)
+docx_replace_substring(doc, r'text_to_replace2', replacement2)
+doc.save('generated_doc1.docx')          
